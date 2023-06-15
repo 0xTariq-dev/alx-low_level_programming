@@ -4,8 +4,8 @@
  */
 
 	# include <stdio.h>
-/*
- * main-Print "programming is like building a multilingual puzzle,
+/**
+ * main - Print "programming is like building a multilingual puzzle,
  *	followed by a new line.
  *
  * and returuns 0
