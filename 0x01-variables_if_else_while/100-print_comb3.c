@@ -8,7 +8,8 @@
 /*
  * main - print all combination of two digits and exclude all
  * the repeated combinations.
- *
+ * for - setting the range for num1 between 0 and 9 and increase
+ * 	by 1 after every step.
  * Return: Always 0
  */
 int main(void)
