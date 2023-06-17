@@ -3,13 +3,11 @@
 #include <stdio.h>
 /*
  * Author: 0xTariq-dev
- * program name: Last Digit
- * including the standard and time library
+ * program name: print alphabet
  */
 
 /**
- * main - print the last digit of random number
- *	and whether it is greater than 5, less than 6, or 0
+ * main - print the alphabt from a to z in lower case
  *
  * Return: Always 0
  */
