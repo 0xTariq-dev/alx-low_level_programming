@@ -5,12 +5,12 @@
  * program name: print combination of two digits
  */
 
-int main(void)
-{
 /*
  * main - print all combination of two digits and exclude all
  * the repeated combinations.
  */
+int main()
+{
 	int num1, num2;
 
 	for (num1 = 0; num1 < 9; num1++);
