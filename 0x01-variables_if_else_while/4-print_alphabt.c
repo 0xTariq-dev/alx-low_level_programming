@@ -8,7 +8,7 @@
 
 /**
  * main - print the alphabt from a to z in lower case exept
- * 	q and e letters
+ *	q and e letters
  *
  * Return: Always 0
  */
