@@ -3,8 +3,7 @@
  * Auth: 0xTariq-dev
  */
 
-# include <stdio.h>
-
+#include <unistd.h>
 /**
  * main - Prints "and that piece of art is useful\" - Dora Korpar, 2015-10-19"
  *	followed by a new line, to standard error.
@@ -13,9 +12,9 @@
  */
 int main(void)
 {
-	fwrite(2,
-		"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-		,60);
+	char m[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
+	write(STD_FILENO, m, sizeof(m) -1);
+	
 	return (1);	
 }
