@@ -5,12 +5,9 @@
  * program name: print combination of two digits
  */
 
-/*
+/**
  * main - print all combination of two digits and exclude all
  * the repeated combinations using two nested for loops.
- *
- * for - setting the range for num1 between 0 and 9 and increase
- *	by 1 after every step.
  *
  * Return: Always 0
  */
@@ -18,6 +15,9 @@ int main(void)
 {
 	int num1, num2;
 
+/** for - setting the range for num1 between 0 and 9 and increase
+ *      by 1 after every step.
+ */
 	for (num1 = 0; num1 < 9; num1++)
 	{
 		for (num2 = num1 + 1; num2 < 10; num2++)
