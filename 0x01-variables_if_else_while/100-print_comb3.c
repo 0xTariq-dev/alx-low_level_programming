@@ -15,7 +15,8 @@ int main(void)
 {
 	int num1, num2;
 
-/** for - setting the range for num1 between 0 and 9 and increase
+/** 
+ * for - setting the range for num1 between 0 and 9 and increase
  *      by 1 after every step.
  */
 	for (num1 = 0; num1 < 9; num1++)
