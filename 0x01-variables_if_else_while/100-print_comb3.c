@@ -8,6 +8,8 @@
 /*
  * main - print all combination of two digits and exclude all
  * the repeated combinations.
+ *
+ * Return: Always 0
  */
 int main(void)
 {
