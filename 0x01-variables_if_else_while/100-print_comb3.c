@@ -9,7 +9,7 @@
  * main - print all combination of two digits and exclude all
  * the repeated combinations.
  */
-int main()
+int main(void)
 {
 	int num1, num2;
 
@@ -33,5 +33,3 @@ int main()
 
 	return (0);
 }
-		
-
