@@ -20,20 +20,14 @@ int main(void)
 	 * The program consists of three conditions
 	 * that evaluates the value of n if it's positive, negative or zero  
 	 */
-	if 
-	{
-		(n > 0)
+	if (n > 0);
 		printf("%d is positive\n", n);
-	}
-	else if
-	{
-		(n = 0)
+	
+	else if (n = 0);
 		printf("%d is zero\n", n);
-	}
-	else
-	{
-		(n < 0)
+	
+	else (n < 0);
 		printf("%d is negative\n", n);
-	}
+	
 	return (0);
 }
