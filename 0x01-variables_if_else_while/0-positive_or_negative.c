@@ -8,9 +8,9 @@
  */
 
 /**
- * main - print the value of n and identifies wether 
+ * main - print the value of n and identifies wether
  * it's postitive, negative or zero
- * 
+ *
  * Return: Always 0
  */
 int main(void)
