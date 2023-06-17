@@ -7,7 +7,7 @@
  * including the standard and time library
  */
 
-/*
+/**
  * main - print the value of n and identifies wether 
  * it's postitive, negative or zero
  * 
