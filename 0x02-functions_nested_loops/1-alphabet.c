@@ -1,5 +1,5 @@
 #include "main.h"
-#include "_putchar.c"
+
 /*
  * Author: 0xTariq-dev
  * File: 1-alphabet.c
@@ -13,10 +13,9 @@ void print_alphabet(void)
 {
 	int l;
 
-	for (l = 'a'; l <= 'z';)
-	{
+	for (l = 'a'; l <= 'z'; l++)
+
 		_putchar(l);
-		l++;
-	}
+
 	_putchar('\n');
 }
