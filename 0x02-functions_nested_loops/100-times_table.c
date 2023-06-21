@@ -20,15 +20,15 @@ void print_times_table(int n)
 		return;
 	}
 
-	for (i = 0; i <= 12; i++)
+	for (i = 0; i <= 15; i++)
 	{
-		for (j = 0; j <= 12; j++)
+		for (j = 0; j <= 15; j++)
 		{
 			if (i * j > n)
 			{
 				break;
 			}
-			printf("%d,  ", i * j);
+			printf("%4d, ", i * j);
 		}
 		printf("\n");
 	}
