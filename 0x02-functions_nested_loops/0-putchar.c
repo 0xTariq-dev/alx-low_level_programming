@@ -3,7 +3,7 @@
 
 /*
  * Author: 0xTariq-dev
- * File: 0-putchr.c
+ * File: "0-putchr.c"
  */
 
 /* main - prints _putchar
