@@ -6,11 +6,11 @@
 
 int _islower(int c)
 {
-	int l;
+	int c;
 
-	if (l =  97, l <= 122)
-			_putchar('1');
+	if (c =  97, c <= 122)
+		return (1);
 	else
-		_putchar('0');
-	}
+		return (0);
+
 }
