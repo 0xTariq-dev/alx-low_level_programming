@@ -2,7 +2,7 @@
 
 /**
  * _islower - pchecks if the letter is lowercase.
- * c - the variable to store the value to check
+ * @c: the variable to store the value to check
  *
  * Return: On success 1.
  *		On error 0.
