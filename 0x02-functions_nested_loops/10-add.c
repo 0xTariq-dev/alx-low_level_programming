@@ -1,4 +1,5 @@
-/* Author: 0xTariq-dev
+/*
+ * Author: 0xTariq-dev
  * File: 10-add.c
  */
 
@@ -13,5 +14,4 @@
  */
 int add(int number1, int number2)
 {
-	return (number1 + number2);
-}
+
