@@ -9,10 +9,10 @@
  * print_alphabet - prints the lowercase alphabet followed by a new line
  */
 
-int l = 'a';
-
 void print_alphabet(void)
 {
+	int l;
+
 	for (l = 'a'; l <= 'z';)
 	{
 		_putchar(l);
