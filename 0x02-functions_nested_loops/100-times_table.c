@@ -13,7 +13,7 @@
  */
 void print_times_table(int n)
 {
-	signed long int i, j;
+	int i, j;
 
 	if (n < 0 || n > 15)
 	{
@@ -24,7 +24,7 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= 12; j++)
 		{
-			printf("%-4d,  ", i * j);
+			printf("%d,  ", i * j);
 		}
 		printf("\n");
 	}
