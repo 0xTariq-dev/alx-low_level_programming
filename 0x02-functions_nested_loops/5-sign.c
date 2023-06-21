@@ -1,8 +1,8 @@
 #include"main.h"
 
 /**
- * _isalpha - checks if the character is letter.
- * @c: the variable to store the value to check.
+ * print_sign - checks if the character is letter.
+ * @n: the variable to store the value to check.
  *
  * Return: On success 1.
  *		On error 0.
@@ -22,7 +22,6 @@ int print_sign(int n)
 	}
 	else
 	{
-		_putchar('0');
-		return (0);
+
 	}
 }
