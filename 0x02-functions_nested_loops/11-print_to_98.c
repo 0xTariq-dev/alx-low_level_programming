@@ -9,19 +9,20 @@
  * print_to_98 - prints the numbers till the number 98.
  * @n: The value of integer to be printed.
  *
- * Return: The result of the addition
  */
 void print_to_98(int n)
 {
 	int x;
 
-	for (n = x; x <= '98'; x++)
+	if (n < 98)
 	{
-		printf("%d, ", x);
+		for (n = x; x < 98; x++)
+			printf("%d, ", x);
 	}
-	for (n = x; x >= '98'; x--)
+	else
 	{
-		printf("%d, ", x);
+		for (n = x; x > 98; x--)
+			printf("%d, ", x);
 	}
-	printf("\n");
+	printf("98\n");
 }
