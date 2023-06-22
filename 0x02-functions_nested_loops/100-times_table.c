@@ -24,11 +24,23 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= 15; j++)
 		{
-			if (i * j > n)
+			n = i * j
+			if ((i || j) > n)
 			{
 				break;
 			}
-			printf("%4d, ", i * j);
+			if (n < 100)
+			{
+				printf("%d,  ", n);
+			}
+			if (n > 100)
+			{
+				printf("%d, ", n);
+			}
+			if (n < 10)
+			{
+				printf("%d,   ", n);
+			}
 		}
 		printf("\n");
 	}
