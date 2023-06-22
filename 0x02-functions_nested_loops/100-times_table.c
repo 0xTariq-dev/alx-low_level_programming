@@ -35,17 +35,15 @@ void print_times_table(int n)
 			}
 			else
 			{
-				int num_digits = 1;
+				int spaces, digits = 1;
 
 				int temp = prod;
 
 				while (temp /= 10)
-					num_digits++;
-				int num_spaces;
+					digits++;
+				spaces = 3 - digits;
 
-				num_spaces = 3 - num_digits;
-
-				printf("%*d", num_spaces + num_digits, prod);
+				printf("%*d", spaces + digits, prod);
 			}
 			if (j != n)
 				printf(",");
