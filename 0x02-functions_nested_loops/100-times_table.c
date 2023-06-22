@@ -17,6 +17,13 @@ void print_times_table(int n)
 		return;
 	}
 
+	prod = n * n;
+	while (prod > 0)
+	{
+		max_digits++;
+		prod /= 10;
+	}
+
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
@@ -26,10 +33,6 @@ void print_times_table(int n)
 			{
 				digits++;
 				prod /= 10;
-			}
-			if (digits > max_digits)
-			{
-				max_digits = digits;
 			}
 			spaces = max_digits - digits;
 			printf("%*d", spaces + digits, i * j);
