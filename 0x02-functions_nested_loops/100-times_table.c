@@ -35,7 +35,7 @@ void print_times_table(int n)
 				prod /= 10;
 			}
 			spaces = max_digits - digits;
-			printf(i * j == 0 ? "%*d" : "%*d", spaces + digits,
+			printf("%*d", spaces + digits,
 					i * j == 0 ? 0 : i * j);
 
 
