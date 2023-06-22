@@ -27,7 +27,7 @@ void print_times_table(int n)
 		printf("%*d", f_d == 0 ? 1 : f_d, i * j);
 		for (j = 0; j <= n; j++)
 		{
-			prod = i * j;
+			p = i * j;
 			while (p > 0)
 			{
 				d++;
