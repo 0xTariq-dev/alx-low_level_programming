@@ -1,10 +1,4 @@
-/*
- * Author: 0xTariq-dev
- * File: 100-times_table.c
- */
-
 #include "main.h"
-
 /**
  * print_times_table - prints the times table of the input starting
  *	with 0.
@@ -14,6 +8,7 @@
 void print_times_table(int n)
 {
 	int i, j, prod;
+	int max_digits = 0;
 
 	if (n < 0 || n > 15)
 	{
@@ -25,28 +20,26 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			prod = i * j;
+			int digits = 0;
 
-			if (prod > n * n)
-				break;
-
-			if (prod == 0)
+			while (prod > 0)
 			{
-				printf("%3d", prod);
+				digits++;
+				prod /= 10;
 			}
-			else
+			if (digits > max_digits)
 			{
-				int spaces, digits = 1;
-
-				int temp = prod;
-
-				while (temp /= 10)
-					digits++;
-				spaces = 3 - digits;
-
-				printf("%*d", spaces + digits, prod);
+				max_digits = digits;
 			}
+			int spaces;
+
+			spaces = max_digits - digits;
+			printf("%*d", spaces + digits, i * j);
+
 			if (j != n)
-				printf(",");
+			{
+			printf(", ");
+			}
 		}
 		printf("\n");
 	}
