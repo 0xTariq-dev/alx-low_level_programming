@@ -27,21 +27,27 @@ void print_times_table(int n)
 			prod = i * j;
 
 			if (prod > n * n)
-			{
 				break;
-			}
-			if (prod < 10)
+
+			if (prod == 0)
 			{
-				printf("%2d  ", prod);
-			}
-			else if (prod < 100)
-			{
-				printf("%2d  ", prod);
+				printf("%3d", prod);
 			}
 			else
 			{
-				printf("%3d  ", prod);
+				int num_digits = 1;
+
+				int temp = prod;
+
+				while (temp /= 10)
+					num_digits++;
+
+				int num_spaces = 3 - num_digits;
+
+				printf("%*d", num_spaces + num_digits, prod);
 			}
+			if (j != n)
+				printf(",");
 		}
 		printf("\n");
 	}
