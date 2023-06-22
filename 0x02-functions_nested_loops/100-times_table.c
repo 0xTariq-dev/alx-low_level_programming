@@ -41,8 +41,9 @@ void print_times_table(int n)
 
 				while (temp /= 10)
 					num_digits++;
+				int num_spaces;
 
-				int num_spaces = 3 - num_digits;
+				num_spaces = 3 - num_digits;
 
 				printf("%*d", num_spaces + num_digits, prod);
 			}
