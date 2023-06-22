@@ -13,9 +13,9 @@
  */
 int main(void)
 {
-	unsigned long int i = 1, x = 2, r = i + x, count;
+	unsigned long int i = 0, x = 1, r = i + x, count;
 
-	for (count = 0; count < 50; count++)
+	for (count = 0; count <= 49; count++)
 	{
 		printf("%ld", r);
 			if (count < 49)
