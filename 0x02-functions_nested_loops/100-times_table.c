@@ -24,7 +24,7 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= 15; j++)
 		{
-			n = i * j
+			n = i * j;
 			if ((i || j) > n)
 			{
 				break;
