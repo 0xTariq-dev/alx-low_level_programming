@@ -7,7 +7,7 @@
 
 /**
  * main - check the output of the function positive_or_negative.
- * Return: Always 0.
+ * Return: 0
  */
 int main(void)
 {
