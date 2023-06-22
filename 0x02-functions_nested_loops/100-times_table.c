@@ -20,13 +20,13 @@ void print_times_table(int n)
 		return;
 	}
 
-	for (i = 0; i <= 15; i++)
+	for (i = 0; i <= n; i++)
 	{
-		for (j = 0; j <= 15; j++)
+		for (j = 0; j <= n; j++)
 		{
 			prod = i * j;
 
-			if (n * n > prod)
+			if (prod > n * n)
 			{
 				break;
 			}
@@ -34,13 +34,13 @@ void print_times_table(int n)
 			{
 				printf("%d,   ", prod);
 			}
-			if (prod > 100)
-			{
-				printf("%d, ", prod);
-			}
-			if (prod < 100 && prod >= 10)
+			else if (prod < 100)
 			{
 				printf("%d,  ", prod);
+			}
+			else
+			{
+				printf("%d, ", prod);
 			}
 		}
 		printf("\n");
