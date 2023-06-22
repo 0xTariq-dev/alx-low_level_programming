@@ -32,23 +32,15 @@ void print_times_table(int n)
 			}
 			if (prod < 10)
 			{
-				printf("%d", prod);
+				printf("%2d  ", prod);
 			}
 			else if (prod < 100)
 			{
-				printf("%d", prod);
+				printf("%2d  ", prod);
 			}
 			else
 			{
-				printf("%d", prod);
-			}
-			if (j < n)
-			{
-				printf(",  ");
-			}
-			else
-			{
-				printf(" ");
+				printf("%3d  ", prod);
 			}
 		}
 		printf("\n");
