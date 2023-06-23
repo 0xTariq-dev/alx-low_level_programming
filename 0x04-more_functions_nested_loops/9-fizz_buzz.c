@@ -32,6 +32,7 @@ int main(void)
 
 		if (n == 100)
 			continue;
+
 		printf(" ");
 	}
 	_putchar('\n');
