@@ -9,7 +9,7 @@
  * print_square - prints a square using the # character.
  * @size: the size of the square.
  */
-void print_sqaure(int n)
+void print_square(int size)
 {
 	int h, w;
 
