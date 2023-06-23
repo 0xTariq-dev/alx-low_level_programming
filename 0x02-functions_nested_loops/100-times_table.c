@@ -5,41 +5,37 @@
  */
 void print_times_table(int n)
 {
-	int i, j, p, s, d = 0, m_d = 0, f = i * 0, f_d = 0;
+	int num, multi, prod;
 
-	if (n < 0 || n > 15)
+	if (n >= 0 || n <= 15)
 	{
-		return;
-	}
-	p = n * n;
-	while (p > 0)
-	{
-		m_d++;
-		p /= 10;
-	}
-	for (i = 0; i <= n; i++)
-	{
-		while (f > 0)
+		for (num = 0; num <= n; num++)
 		{
-			f_d++;
-			f /= 10;
-		}
-		printf("%*d", f_d == 0 ? 1 : f_d, i * j);
-		for (j = 0; j <= n; j++)
-		{
-			p = i * j;
-			while (p > 0)
+			_putchar('0');
+
+			for (multi = 1; multi <= n; multi++)
 			{
-				d++;
-				p /= 10;
-			}
-			s = m_d - d;
-			printf("%*d", s + d, i * j);
-			if (j != n)
-			{
-			printf(", ");
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * multi;
+
+				if (prod <= 99)
+					_putchar(' ');
+				if (prod <= 9)
+					_putchar(' ');
+
+				if(prod >= 100)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
+				}
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
 			}
 		}
-		printf("\n");
 	}
 }
