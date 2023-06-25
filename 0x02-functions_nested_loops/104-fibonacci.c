@@ -13,19 +13,36 @@
  */
 int main(void)
 {
-	unsigned long int i = 0, x = 1, r = i + x, count;
+	unsigned long int r, i, x, i1, i2, x1, x2;
 
-	for (count = 0; count <= 98; count++)
+	i = 1;
+	x = 2;
+
+	printf("%lu", i);
+
+	for (r = 1; r < 91; r++)
 	{
-		printf("%lu", r);
-			if (count < 97)
-			{
-			printf(", ");
-			}
-		i = x;
-		x = r;
-		r = i + x;
+		printf("%lu, ", x);
+		x = x + i;
+		i = x - i;
 	}
+
+	i1 = i / 10000000000;
+	x1 = x / 10000000000;
+	i2 = i % 10000000000;
+	x2 = x % 10000000000;
+
+	for (r = 92; r < 99; r++)
+	{
+
+		printf(", %lu", x1 + (x2 / 1000000000));
+		printf("%lu", x2 % 1000000000);
+		x1 = x1 + i1;
+		i1 = x1 - i1;
+		x2 = x2 + i2;
+		i2 = x2 - i2;
+	}
+
 	printf("\n");
 
 	return (0);
