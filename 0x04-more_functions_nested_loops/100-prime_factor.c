@@ -11,20 +11,12 @@
  */
 int main(void)
 {
-	unsigned long int n = 612852475143, p_f = 2;
+	unsigned long int n = 612852475143, p_f = 3;
 
-	while (p_f < (n / 2))
+	for (; p_f < 12057; p_f += 2)
 	{
-		if (n % p_f == 0)
-		{
-			n /= 2;
-			continue;
-		}
-		for (p_f = 3; p_f < (n / 2); p_f += 2)
-		{
-			if (n % p_f == 0)
+		while (n % p_f == 0 && n != 1)
 				n /= p_f;
-		}
 	}
 
 	printf("%lu\n", p_f);
