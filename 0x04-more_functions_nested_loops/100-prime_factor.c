@@ -23,6 +23,6 @@ int main(void)
 
 	printf("%lu\n", p_f);
 
-	return 0;
-	
+	return (0);
+
 }
