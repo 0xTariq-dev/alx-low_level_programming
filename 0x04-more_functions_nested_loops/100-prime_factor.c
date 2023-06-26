@@ -1,33 +1,28 @@
 /*
  * Author: 0xTariq-dev
- * File: 10-print_triangle.c
+ * File: 100-prime_factor.c
  */
 
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_triangle - Prints a triangle, using the character #.
- * @size: The size of the triangle.
+ * main - Finds and prints the prime factors of the number "612852475143".
  */
-void print_triangle(int size)
+int main(void)
 {
-	int hash, index;
+	unsigned long int n = 612852475143;
+	unsigned long int p_f = 2;
 
-	if (size > 0)
+	while (n != 1)
 	{
-		for (hash = 1; hash <= size; hash++)
-		{
-			for (index = size - hash; index > 0; index--)
-				_putchar(' ');
-
-			for (index = 0; index < hash; index++)
-				_putchar('#');
-
-			if (hash == size)
-				continue;
-
-			_putchar('\n');
-		}
+		if (n % p_f == 0)
+			n = n / p_f;
+		else
+			p_f++;
 	}
-	_putchar('\n');
+
+	printf("%lu\n", p_f);
+
+	return 0;
+	
 }
