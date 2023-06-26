@@ -8,6 +8,7 @@
 
 /**
  * main - Finds and prints the prime factors of the number "612852475143".
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -16,7 +17,9 @@ int main(void)
 	for (; p_f < 12057; p_f += 2)
 	{
 		while (n % p_f == 0 && n != 1)
-				n /= p_f;
+		{
+			n /= p_f;
+		}
 	}
 
 	printf("%lu\n", p_f);
