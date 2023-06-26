@@ -18,7 +18,7 @@ int main(void)
 	i = 1;
 	x = 2;
 
-	printf("%lu", i);
+	printf("%lu, ", i);
 
 	for (r = 1; r < 91; r++)
 	{
