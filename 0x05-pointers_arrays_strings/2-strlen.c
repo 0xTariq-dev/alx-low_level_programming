@@ -10,7 +10,7 @@
  * @s: The pointer to the string.
  * Return: the value of len.
  */
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	int len = 0;
 

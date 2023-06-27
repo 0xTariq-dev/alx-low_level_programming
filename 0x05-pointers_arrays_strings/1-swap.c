@@ -10,7 +10,7 @@
  * @a: The pointer to the first integer.
  * @b: The pointer to the second integer.
  */
-void swap_int(int *a, int *b);
+void swap_int(int *a, int *b)
 {
 	int temp = *a;
 
