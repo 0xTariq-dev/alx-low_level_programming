@@ -21,10 +21,10 @@ int _atoi(char *s)
 	f = 0;
 	digit = 0;
 
-	while (src[tmp] != '\0')
+	while (s[tmp] != '\0')
 		tmp++;
 
-	while (i < len && f == 0)
+	while (i < tmp && f == 0)
 	{
 		if (s[i] == '-')
 			++d;
