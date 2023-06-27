@@ -7,8 +7,7 @@
 
 /**
  * rev_string - Rverses thee order of a string.
- * @n - The value
- * Return: Always 0.
+ * @n: The string to be reversed.
  */
 void rev_string(char *s)
 {
