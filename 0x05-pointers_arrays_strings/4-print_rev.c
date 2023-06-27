@@ -1,17 +1,24 @@
 /*
  * Author: 0xTariq-dev
- * File:
+ * File: 4-print_rev.c
  */
 
 #include "main.h"
 
 /**
- * main -
- * @n - The value
- * Return: Always 0.
+ * print_rev - Prints a string of characters in reverse order.
+ * @s: The pointer to the string to be printed.
  */
-int main()
+void print_rev(char *s)
 {
+	int rev;
 
-	return ();
+	while (s[rev] != '\0')
+		rev++;
+
+	while (rev)
+		_putchar(s[--rev]);
+	
+	_putchar('\n');
+
 }
