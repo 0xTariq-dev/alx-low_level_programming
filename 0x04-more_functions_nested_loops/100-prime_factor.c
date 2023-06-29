@@ -14,7 +14,7 @@ int main(void)
 {
 	unsigned long int n = 612852475143, p_f = 3;
 
-	for (; p_f < 12057; p_f += 2)
+	for (; p_f <= n; p_f += 2)
 	{
 		while (n % p_f == 0 && n != 1)
 		{
