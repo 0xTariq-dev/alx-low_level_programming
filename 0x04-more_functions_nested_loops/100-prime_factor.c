@@ -22,7 +22,7 @@ int main(void)
 		}
 	}
 
-	printf("%lu\n", p_f);
+	printf("%lu\n", (p_f - 2));
 
 	return (0);
 
