@@ -14,7 +14,7 @@
  *	is less, zero if equal and positive if the first is
  *	longer.
  */
-char *_strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	while (*s1 == *s2)
 	{
