@@ -10,7 +10,7 @@
  * @s: The string to be modified.
  * Return: The resulting string.
  */
-char *string_toupper(char *s)
+char *string_toupper(char *)
 {
 	int i;
 
