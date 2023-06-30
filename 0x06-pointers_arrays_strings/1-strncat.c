@@ -6,7 +6,7 @@
 #include "main.h"
 
 /**
- * *_strncat - Appends a number of characters from src
+ * _strncat - Appends a number of bytes from src
  *	 string to the dest string,
  *	 overwriting the null byte at the end of dest.
  * @dest: The string to be appended.
@@ -16,7 +16,7 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, x = 0, n;
+	int i = 0, x = 0;
 
 	while (dest[i] != '\0')
 		i++;
