@@ -1,6 +1,6 @@
 /*
  * Author: 0xTariq-dev
- * File: 3-strmcp.c
+ * File: 4-rev_array.c
  */
 
 #include "main.h"
