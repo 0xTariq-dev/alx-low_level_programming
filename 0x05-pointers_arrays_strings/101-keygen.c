@@ -1,50 +1,39 @@
 /*
  * Author: 0xTariq-dev
- * File: 100-atoi.c
+ * File: 101-keygen.c
  */
 
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * _atoi - Converts a string to an integer.
- * @s: The string to be converted.
- * Return: the converted string.
+ * main - Creates a random password for the 101-crackme.
+ *
+ * Return: Always 0.
  */
-int _atoi(char *s)
+int main(void)
 {
-	int i, d, n, tmp, f, digit;
+	int pass[100];
+	int i, x, sum = 0;
 
-	i = 0;
-	d = 0;
-	n = 0;
-	tmp = 0;
-	f = 0;
-	digit = 0;
+	srand(time(NULL));
 
-	while (s[tmp] != '\0')
-		tmp++;
-
-	while (i < tmp && f == 0)
+	for (i = 0 ; i < 100; i++)
 	{
-		if (s[i] == '-')
-			++d;
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		x = 2772 - sum - '0';
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (x < 78)
 		{
-			digit = s[i] - '0';
-			if (d % 2)
-				digit = -digit;
-			n = n * 10 + digit;
-			f = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
-				break;
-			f = 0;
+			sum += x;
+			putchar(x + '0');
+			putchar('\n');
+			break;
 		}
-		i++;
 	}
 
-	if (f == 0)
-		return (0);
-
-	return (n);
+	return (0);
 }
