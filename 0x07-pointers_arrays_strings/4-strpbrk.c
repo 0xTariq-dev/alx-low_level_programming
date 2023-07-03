@@ -1,36 +1,32 @@
 /*
  * Author: 0xTariq-dev
- * File: 3-strspn.c
+ * File: 4-strpbrk.c
  */
 
 #include "main.h"
 
 /**
- * _strspn - Gets the length of a prefix substring.
+ * _strpbrk - Search a string for any of a set of bytes.
  * @s: The string to be searched for accept bytes.
- * @accept: The characters to search for.
- * Return: A number of the initial segment s which
- *	consist only of bytes drom accept.
+ * @accept: The string to search for in s.
+ * Return: A pointer to the byte is s that matches one of
+ *	the bytes in accept or NULL if no such byte found.
  */
-char *_strchr(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int i, x, n, stat;
-
-	f = 0;
+	int i, x;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		stat = 0;
-		for (i = 0; s[i] != '\0'; i++)
+		for (x = 0; accept[x] != '\0'; x++)
 		{
-			if (s[i] == accept[j])
+			if (s[i] == accept[x])
 			{
-				f++;
-				stat = 1;
+				return (x);
 			}
 		}
-		if (stat == 0)
-			return (f);
+		if (accept[x] == 0)
+			return (NULL);
 	}
 	return (0);
 }
