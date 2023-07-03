@@ -16,12 +16,12 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i, x, n, stat;
 
-	f = 0;
+	n = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		stat = 0;
-		for (j = 0; accept[x] != '\0'; x++)
+		for (x = 0; accept[x] != '\0'; x++)
 		{
 			if (s[i] == accept[x])
 			{
@@ -30,7 +30,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		if (stat == 0)
-			return (f);
+			return (n);
 	}
 	return (0);
 }
