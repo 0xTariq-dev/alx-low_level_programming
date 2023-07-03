@@ -14,18 +14,23 @@
  */
 char *_strchr(char *s, char *accept)
 {
-	int i, x, n;
+	int i, x, n, stat;
 
 	f = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		stat = 0;
 		for (i = 0; s[i] != '\0'; i++)
 		{
 			if (s[i] == accept[j])
-				f++
+			{
+				f++;
+				stat = 1;
+			}
 		}
-		return (f);
+		if (stat == 0)
+			return (f);
 	}
 	return (0);
 }
