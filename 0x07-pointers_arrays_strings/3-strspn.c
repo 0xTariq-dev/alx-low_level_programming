@@ -12,7 +12,7 @@
  * Return: A number of the initial segment s which
  *	consist only of bytes drom accept.
  */
-char *_strchr(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	int i, x, n, stat;
 
