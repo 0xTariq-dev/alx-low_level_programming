@@ -13,16 +13,19 @@
  *
  * Return: The sum of the diagonals.
  */
-void print_diagsums(char *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int i;
 
-	unsigned dsum, dsum1;
+	unsigned int dsum, dsum1;
+
+	dsum = 0;
+	dsum1 = 0;
 
 	for (i = 0; i < size; i++)
 	{
 		dsum += a[(size * i) + i];
-		dsum1 += a[(size * (i + 1) - (i + 1)];
+		dsum1 += a[(size * (i + 1) - (i + 1))];
 	}
 	printf("%d, %d\n", dsum, dsum1);
 }
