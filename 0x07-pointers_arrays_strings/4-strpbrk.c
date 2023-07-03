@@ -21,7 +21,7 @@ char *_strchr(char *s, char *accept)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		stat = 0;
-		for (j = 0; accept[j] != '\0'; j++)
+		for (i = 0; s[i] != '\0'; i++)
 		{
 			if (s[i] == accept[j])
 			{
