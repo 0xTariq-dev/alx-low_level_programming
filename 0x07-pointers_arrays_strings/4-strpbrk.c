@@ -22,10 +22,9 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (*s == accept[x])
 			{
-				return (s);
+				reeturn (s);
 			}
 		}
 		s++;
 	}
-	return (NULL);
 }
