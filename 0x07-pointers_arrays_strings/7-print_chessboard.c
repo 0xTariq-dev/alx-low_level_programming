@@ -8,6 +8,8 @@
 /**
  * print_chessboard - Prints the chessboard.
  * @a: The number of rows.
+ *
+ * Return: nothing.
  */
 char print_chessboard(char (*a)[8])
 {
