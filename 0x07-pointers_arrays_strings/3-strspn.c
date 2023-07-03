@@ -25,7 +25,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[x])
 			{
-				f++;
+				n++;
 				stat = 1;
 			}
 		}
