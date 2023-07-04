@@ -34,13 +34,20 @@ int main(void)
 
 	for (r = 92; r < 99; r++)
 	{
-
-		printf(", %lu", x1 + (x2 / 10000000000));
-		printf("%lu", x2 % 10000000000);
+		if (r < 98)
+		{
+		printf("%lu", x1 + (x2 / 10000000000));
+		printf("%lu, ", x2 % 10000000000);
 		x1 = x1 + i1;
 		i1 = x1 - i1;
 		x2 = x2 + i2;
 		i2 = x2 - i2;
+		}
+		else
+		{
+			printf("%lu", x1 + (x2 / 10000000000));
+			printf("%lu", x2 % 10000000000);
+		}
 	}
 
 	printf("\n");
