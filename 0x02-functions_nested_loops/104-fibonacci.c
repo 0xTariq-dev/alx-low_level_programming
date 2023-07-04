@@ -13,10 +13,11 @@
  */
 int main(void)
 {
-	unsigned long int r, i, x, i1, i2, x1, x2;
+	unsigned long int r, i, x, i1, i2, x1, x2, mod;
 
 	i = 1;
 	x = 2;
+	mod = 10000000000;
 
 	printf("%lu, ", i);
 
@@ -27,17 +28,17 @@ int main(void)
 		i = x - i;
 	}
 
-	i1 = i / 10000000000;
-	x1 = x / 10000000000;
-	i2 = i % 10000000000;
-	x2 = x % 10000000000;
+	i1 = i / mod;
+	x1 = x / mod;
+	i2 = i % mod;
+	x2 = x % mod;
 
 	for (r = 92; r < 99; r++)
 	{
 		if (r < 98)
 		{
-		printf("%lu", x1 + (x2 / 10000000000));
-		printf("%lu, ", x2 % 10000000000);
+		printf("%lu", x1 + (x2 / mod));
+		printf("%lu, ", x2 % mod);
 		x1 = x1 + i1;
 		i1 = x1 - i1;
 		x2 = x2 + i2;
@@ -45,8 +46,8 @@ int main(void)
 		}
 		else
 		{
-			printf("%lu", x1 + (x2 / 10000000000));
-			printf("%lu", x2 % 10000000000);
+			printf("%lu", x1 + (x2 / mod));
+			printf("%lu", x2 % mod);
 		}
 	}
 
