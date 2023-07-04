@@ -10,7 +10,7 @@
  * @s: double pointer.
  * @to: A pointer to a value.
  */
-void set_string(int **s, int *to)
+void set_string(char **s, char *to)
 {
 	*s = to;
 }
