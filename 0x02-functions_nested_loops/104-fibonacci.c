@@ -18,7 +18,6 @@ int main(void)
 	i = 1;
 	x = 2;
 	mod = 10000000000;
-
 	printf("%lu, ", i);
 
 	for (r = 1; r < 91; r++)
@@ -27,7 +26,6 @@ int main(void)
 		x = x + i;
 		i = x - i;
 	}
-
 	i1 = i / mod;
 	x1 = x / mod;
 	i2 = i % mod;
@@ -50,8 +48,6 @@ int main(void)
 			printf("%lu", x2 % mod);
 		}
 	}
-
 	printf("\n");
-
 	return (0);
 }
