@@ -20,7 +20,7 @@ int _sqrt_recursion(int n)
 	return (_sqrt(n, 0));
 }
 /**
- * _squrt - A helper Function that finds the square root of a n.
+ * _sqrt - A helper Function that finds the square root of a n.
  * @n: The number to calculate the square root of.
  * @x: The value to check.
  *
