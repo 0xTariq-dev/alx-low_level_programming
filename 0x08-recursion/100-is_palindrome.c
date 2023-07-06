@@ -38,8 +38,8 @@ int _strlen(char *s)
  * _palindrome - A helper Function that finds if the
  *	string is palindrome.
  * @s: The string to check.
- * @l: The variable to start from left.
- * @r: The variable to start from Right.
+ * @x: The variable to start from left.
+ * @len: The variable to start from Right.
  * Return: 1 if palindrome or empty, otherwise 0.
  */
 int _palindrome(char *s, int x, int len)
