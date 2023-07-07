@@ -8,7 +8,7 @@
 /**
  * _puts - Prints a string followed by a new line to
  *	the standard output.
- * @str: The string to be printed.
+ * @s: The string to be printed.
  */
 void _puts(char *s)
 {
