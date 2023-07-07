@@ -2,11 +2,12 @@
 #define MAIN_H
 
 #include <stdio.h>
+#include <unistd.h>
 /*
  * file: main.h
  * author: 0xTariq-dev
  * describtion: Header file contains declarations for functions
- * 		used in the 0x09-static_libraries project.
+ *		used in the 0x09-static_libraries project.
  */
 
 int _putchar(char c);
