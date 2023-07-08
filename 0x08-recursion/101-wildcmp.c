@@ -5,48 +5,28 @@
 
 #include "main.h"
 
-int _palindrome(char *s, int x, int len);
-int _strlen(char *s);
-
 /**
- * is_palindrome - Checks if a string is paliindrome.
- * @s: The string to find if it's palindrome.
- * Return: 1 if a srting is palindrome or empty,
- *	otherwise 0.
- */
-int is_palindrome(char *s)
-{
-	if (*s == 0)
-		return (1);
-	return (_palindrome(s, 0, _strlen(s)));
-}
-
-/**
- * _strlen - Returns the length of a string.
- * @s: The string to find the length of.
+ * wildcmp - Compares if two strings are identical.
+ * @s1: The first string.
+ * @s2: The second string.
  *
- * Return: Length of the string.
+ * Return: 1 if the srtings is identical,otherwise 0.
  */
-int _strlen(char *s)
+int wildcmp(char *s1, char *s2)
 {
-	if (*s == '\0')
-		return (0);
-	return (1 + _strlen(s + 1));
-}
+	int i, x;
 
-/**
- * _palindrome - A helper Function that finds if the
- *	string is palindrome.
- * @s: The string to check.
- * @x: The variable to start from left.
- * @len: The variable to start from Right.
- * Return: 1 if palindrome or empty, otherwise 0.
- */
-int _palindrome(char *s, int x, int len)
-{
-	if (*(s + x) != *(s + len - 1))
-		return (0);
-	if (x >= len)
-		return (1);
-	return (_palindrome(s, x + 1, len - 1));
+	while (i = 0, s1[i] != '\0', i++)
+	{
+		while (x = 0, s2[x] != '\0', x++)
+		{
+			if (s1[i] == s2[x])
+				return (1);
+			else if (s2[x] = "*")
+				return (1);
+			else
+				return (0);
+		}
+	}
+	return (0);
 }
