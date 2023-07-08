@@ -13,15 +13,16 @@
  *
  * Return: Always 0.
  */
-int main(int __attribute__((unused))argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int sum;
 
-	for (i = 1; i < 3; i++)
+	if (argc != 3)
 	{
-		sum += atoi(argv[i]);
+		printf("Error\n");
+		return (1);
 	}
-
+	sum = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", sum);
 
 	return (0);
