@@ -11,7 +11,6 @@
  * main - Prints the multiplication of positive numbers.
  * @argc: The count of the arguments provided to program.
  * @argv: An array of pointers to a string of the arguments.
- * @sum: The sum of the two numbers.
  *
  * Return: Always 0.
  */
