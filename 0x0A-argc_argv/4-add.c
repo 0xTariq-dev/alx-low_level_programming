@@ -9,7 +9,7 @@
  *
  * Return: Always 0.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int i, x, sum = 0;
 
@@ -28,5 +28,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d\n", sum);
-	return (NULL);
+	return (0);
 }
