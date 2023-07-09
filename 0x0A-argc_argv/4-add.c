@@ -12,7 +12,7 @@
  * @argc: The count of the arguments provided to program.
  * @argv: An array of pointers to a string of the arguments.
  *
- * Return: The number of coins added to the sum variable.
+ * Return: The addition of the numbers given.
  */
 int main(int argc, char **argv)
 {
