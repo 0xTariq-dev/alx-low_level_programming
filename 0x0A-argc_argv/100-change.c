@@ -1,8 +1,3 @@
-/*
- * Author: 0xTariq-dev
- * File: 100-change.c
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -23,10 +18,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
 	change = atoi(argv[1]);
 	coins = 0;
-
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
@@ -45,5 +38,5 @@ int main(int argc, char *argv[])
 		printf("%d\n", coins);
 		return (coins);
 	}
-	return (1);
+	return (0);
 }
