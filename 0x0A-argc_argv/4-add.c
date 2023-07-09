@@ -7,7 +7,7 @@
  * @argc: The count of the arguments provided to program.
  * @argv: An array of pointers to a string of the arguments.
  *
- * Return: Always 0.
+ * Return: The number of coins added to the sum variable.
  */
 int main(int argc, char **argv)
 {
@@ -28,5 +28,5 @@ int main(int argc, char **argv)
 	}
 
 	printf("%d\n", sum);
-	return (1);
+	return (sum);
 }
