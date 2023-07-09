@@ -1,3 +1,8 @@
+/*
+ * Author: 0xTariq-dev
+ * File: 4-add.c
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -28,5 +33,5 @@ int main(int argc, char **argv)
 	}
 
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
