@@ -1,8 +1,3 @@
-/*
- * Author: 0xTariq-dev
- * File: 4-add.c
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
