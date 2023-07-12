@@ -29,7 +29,7 @@ char *_strdup(char *str)
 	str2 = malloc(x + 1);
 
 	if (str2 == 0)
-		return (NULL);
+		return (0);
 
 	while (i < x)
 	{
