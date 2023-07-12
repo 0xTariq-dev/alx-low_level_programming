@@ -30,6 +30,7 @@ char *create_array(unsigned int size, char c)
 		return (0);
 
 	*(p + i) = '\0';
+	free(p);
 
 	return (p);
 }
