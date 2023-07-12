@@ -21,9 +21,9 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, x = 0, n;
 
 	if (s1 == NULL)
-		return (s2);;
+		*s = s2;
 	if (s2 == NULL)
-		s2 = '\0';
+		*s = s1;
 
 	while (s1[i] != '\0' && s2[x] != '\0')
 	{
