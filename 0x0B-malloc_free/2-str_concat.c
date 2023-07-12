@@ -31,11 +31,11 @@ char *str_concat(char *s1, char *s2)
 		x++;
 
 	s_size = i + x;
-	s = malloc(s_size + 2);
+	s = malloc(s_size + 1);
 
 	for (n = 0; n <= (s_size + 2); n++)
 	{
-		if (n < i)
+		if (n <= i)
 			s[n] = s1[n];
 		else
 			s[n] = s2[n - i];
