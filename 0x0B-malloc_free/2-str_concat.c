@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 		x++;
 	}
 
-	s = malloc(i + x + 3);
+	s = malloc(i + x + 2);
 
 	for (n = 0; n <= (i + x + 2); n++)
 	{
