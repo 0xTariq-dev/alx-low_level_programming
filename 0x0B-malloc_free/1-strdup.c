@@ -19,18 +19,23 @@
 char *_strdup(char *str)
 {
 	char *str2;
-	unsigned int i, x;
+	unsigned int i = 0, x = 0;
 
-	while (str[x])
-		x++;
-
-	str2 = malloc((x + 1) * sizeof(char));
-
-	if (str2 == NULL)
+	if (str == NULL)
 		return (NULL);
 
-	while ((str2[i] = str[i]) != '\0')
-			i++;
+	while (str[x] != '\0')
+		x++;
 
+	str2 = malloc(x * sizeof(str) + 1);
+
+	if (str2 == 0)
+		return (NULL);
+
+	while (i < x)
+	{
+		str2[i] = str[i];
+		i++;
+	}
 	return (str2);
 }
