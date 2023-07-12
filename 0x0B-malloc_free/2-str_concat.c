@@ -18,22 +18,22 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	unsigned int i = 0, x = 0, n;
+	unsigned int i = 0, x = 0, n, s_size;
 
 	if (s1 == NULL)
 		s = s2;
 	if (s2 == NULL)
 		s = s1;
 
-	while (s1[i] != '\0' && s2[x] != '\0')
-	{
+	while (s1[i] != '\0')
 		i++;
+	while (s2[x] != '\0')
 		x++;
-	}
 
-	s = malloc(i + x + 2);
+	s_size = i + x;
+	s = malloc(s_size + 2);
 
-	for (n = 0; n <= (i + x + 2); n++)
+	for (n = 0; n <= (s_size + 2); n++)
 	{
 		if (n < i)
 			s[n] = s1[n];
