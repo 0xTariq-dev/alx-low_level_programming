@@ -18,24 +18,13 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *p;
-	unsigned int i  = 0;
+	char *p = malloc(size);
 
-	if (size == 0)
+	if (size == 0 || p == 0)
 		return (NULL);
 
-	p = (char *) malloc(size * sizeof(char));
-
-	while (i < size)
-	{
-		*(p + i) = c;
-		i++;
-	}
-
-	if (p == NULL)
-		return (0);
-
-	*(p + i) = '\0';
+	while (size--)
+		p[size] = c;
 
 	return (p);
 }
