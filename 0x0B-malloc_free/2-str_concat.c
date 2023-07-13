@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 
 	i = _strlen(s1);
 	x = _strlen(s2);
-	s = mslloc((i + x + 1) * sizeof(char));
+	s = malloc((i + x + 1) * sizeof(char));
 	if (s == 0)
 		return (0);
 
