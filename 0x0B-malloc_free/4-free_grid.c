@@ -17,15 +17,15 @@
 
 void free_grid(int **grid, int height)
 {
-	int i = 0;
+	int i;
 
-	if (grid == NULL)
+	if (grid == NULL || height == 0)
 		return;
 
-	while (i < height)
-		free((int *)grid[i++]);
+	for (i = 0; i < height; i++)
+		free(grid[i]);
+
 	free(grid);
 
-	return;
 }
 
