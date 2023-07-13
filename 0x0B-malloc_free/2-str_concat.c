@@ -35,9 +35,15 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, x, n;
 
 	if (s1 == NULL)
+	{
 		s1 = '\0';
+		s = s2;
+	}
 	if (s2 == NULL)
+	{
 		s2 = '\0';
+		s = s1;
+	}
 
 	i = _strlen(s1);
 	x = _strlen(s2);
