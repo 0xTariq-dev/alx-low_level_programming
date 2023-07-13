@@ -5,6 +5,20 @@
 
 #include "main.h"
 #include <stdlib.h>
+/**
+ * _strlen - Find length of a string.
+ * @str: string to find the size of.
+ * Return: Size of the string
+ */
+
+int _strlen(char *str)
+{
+	int size = 0;
+
+	for (; str[size] != '\0'; size++)
+	;
+	return (size);
+}
 
 /**
  * *str_concat - Concatenates the string s2 to the end of the string s1.
@@ -17,26 +31,27 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char **s;
-	unsigned int i = 0, x = 0, n, s_size;
+	char *s;
+	unsigned int i, x, n;
 
 	if (s1 == NULL)
-		**s = s2;
-	if (s2 != NULL)
+		s1 = '\0';
+	if (s2 == NULL)
+		s2 = '\0';
+
+	i = _strlen(s1);
+	x = _strlen(s2);
+	s = mslloc((i + x + 1) * sizeof(char));
+	if (s == 0)
+		return (0);
+
+	for (n = 0; n <= i + x; n++)
 	{
-		while (s1[i] != '\0')
-			i++;
-		while (s2[x] != '\0')
-			x++;
-
-		s_size = i + x + 1;
-		s = malloc(s_size);
-
-		for (n = 0; s1[n] != '\0'; n++)
-			*s[s_size] = s1[i];
-		for (n = 0; s2[n] != '\0'; n++)
-			*s[s_size] = s2[x];
+		if (n < i)
+			s[n] = s1[n];
+		else
+			s[n] = s2[n - i];
 	}
-	s[(s_size + 1)] = '\0';
-	return (*s);
+	s[n] = '\0';
+	return (s);
 }
