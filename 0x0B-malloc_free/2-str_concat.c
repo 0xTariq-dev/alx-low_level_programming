@@ -32,7 +32,7 @@ int _strlen(char *str)
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	unsigned int i, x, n;
+	unsigned int i, x, n = 0;
 
 	if (s1 == NULL)
 	{
