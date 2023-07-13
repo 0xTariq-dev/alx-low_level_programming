@@ -34,17 +34,15 @@ char *str_concat(char *s1, char *s2)
 	char *s;
 	unsigned int i, x, n = 0;
 
-	while (n = 0, s1 == NULL && s2 != '\0')
+	for (n = 0; s1 == NULL && s2 != '\0'; n++)
 	{
 		s1 = '\0';
 		s[n] = s2[n];
-		n++;
 	}
-	while (n = 0, s2 == NULL && s1 != '\0')
+	for (n = 0; s2 == NULL && s1 != '\0'; n++)
 	{
 		s2 = '\0';
 		s[n] = s1[n];
-		n++;
 	}
 
 	i = _strlen(s1);
