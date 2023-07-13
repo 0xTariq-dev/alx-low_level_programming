@@ -37,12 +37,12 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		s1 = '\0';
-		*s = s2;
+		s[n++] = s2[n++];
 	}
 	if (s2 == NULL)
 	{
 		s2 = '\0';
-		*s = s1;
+		s[n++] = s1[n++];
 	}
 
 	i = _strlen(s1);
