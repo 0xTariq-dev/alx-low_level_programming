@@ -11,21 +11,27 @@
  * @memb: The number of elements in the array.
  * @size: The size of the element.
  *
- * Return: A pointer to the allocated memory.
+ * Return: A pointer to the allocated memory if succes.
+ *	   NULL - if function fails or (size or memb) = 0.
  */
 
 void *_calloc(unsigned int memb, unsigned int size)
 {
-	int *p;
-	unsigned int n = memb * size;
+	void *p;
+	char *fill;
+	unsigned int n;
 
-	if (n == 0)
+	if (size == 0 || memb == 0)
 		return (NULL);
 
 	p = malloc(memb * size);
 
 	if (p == NULL)
 		return (NULL);
+
+	fill = p;
+	for (n = 0; n < (memb * size); n++)
+		fill[n] = 0;
 
 	return (p);
 }
