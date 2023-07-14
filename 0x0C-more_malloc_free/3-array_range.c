@@ -1,35 +1,31 @@
 /*
  * Author: 0xTariq-dev
- * File: 2-calloc.c
+ * File: 3-array_range.c
  */
 
 #include "main.h"
 #include <stdlib.h>
 
 /**
- * _calloc - Allocates mmory for an array using malloc.
- * @memb: The number of elements in the array.
- * @size: The size of the element.
+ * *array_range - Creates an array of integers.
+ * @min: The minimum value to start with.
+ * @max: The maximum value to end with.
  *
- * Return: A pointer to the allocated memory if succes.
- *	   NULL - if function fails or (size or memb) = 0.
+ * Return: A pointer to the new created array.
  */
 
-void *_calloc(unsigned int memb, unsigned int size)
+int *array_range(int min, int max)
 {
-	char *p;
-	unsigned int n;
+	int *arr;
+	int i;
 
-	if (size == 0 || memb == 0)
+	if (min > max)
 		return (NULL);
 
-	p = malloc(memb * size);
+	arr = malloc(sizeof(int) * (max - min));
 
-	if (p == NULL)
-		return (NULL);
+	for (i = 0; i < (max - min); i++)
+		arr[i] = min++;
 
-	for (n = 0; n < (memb * size); n++)
-		p[n] = 0;
-
-	return (p);
+	return (arr);
 }
