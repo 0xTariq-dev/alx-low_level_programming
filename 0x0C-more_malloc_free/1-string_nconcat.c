@@ -1,13 +1,13 @@
 /*
  * Author: 0xTariq-dev
- * File: 1-string_noncat.c
+ * File: 1-string_nconcat.c
  */
 
 #include "main.h"
 #include <stdlib.h>
 
 /**
- * string_noncat - Concatenates two strings..
+ * string_nconcat - Concatenates two strings..
  * @s1: The first string.
  * @s2: The second string.
  * @n: The number of string s2 to concatenate to string s2.
@@ -15,7 +15,7 @@
  * Return: A pointer to the new string.
  */
 
-char *string_noncat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	unsigned int size1, size2, i;
