@@ -40,7 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	for (; i <= name_l; i++)
-		name_dog->name[i] = name[i];
+		new_dog->name[i] = name[i];
 
 	new_dog->owner = malloc(owner_l + 1);
 	if (new_dog->owner == NULL)
@@ -49,9 +49,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	for (; owner[i]; i++)
-		owner_cpy[i] = owner[i];
+	for (; i <= owner_l; i++)
+		new_dog->owner[i] = owner[i];
 
+	new_dog->age = age;
 	return (new_dog);
 
 }
