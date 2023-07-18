@@ -10,7 +10,7 @@
  * free_dog - free the structure named dog.
  * @d: The structure to free.
  */
-void print_dog(struct dog *d)
+void free_dog(struct dog *d)
 {
 	if (d == NULL)
 		return;
