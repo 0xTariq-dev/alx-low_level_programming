@@ -1,6 +1,6 @@
 /*
  * Author: 0xTariq-dev
- * File: 0xTariq-dev
+ * File: 2-print_dog.c
  */
 
 #include <stdio.h>

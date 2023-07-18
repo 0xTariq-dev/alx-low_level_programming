@@ -18,22 +18,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 	char *name_cpy, *owner_cpy;
-	int i = 0, name_l = 0, owner_l = 0;
+	int i = 0;
 
 	if (name == NULL || owner == NULL)
 			return (NULL);
-
-	while (name[name_l])
-		name_l++;
-	while (owner[owner_l])
-		owner_l++;
 
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 		return (NULL);
 
-	name_cpy = malloc(name_l + 1);
-	owner_cpy = malloc(owner_l + 1);
+	name_cpy = malloc(sizeof(*name) + 1);
+	owner_cpy = malloc(sizeof(*owner) + 1);
 
 	if (name_cpy == NULL)
 		return (NULL);

@@ -1,6 +1,6 @@
 /*
  * Author: 0xTariq-dev
- * File: 0xTariq-dev
+ * File: 1-init_dog.c
  */
 
 #include "dog.h"
