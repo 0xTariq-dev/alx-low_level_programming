@@ -12,7 +12,7 @@
  * @age: The age of the dog.
  * @owner: The name of owner.
  *
- * Return: The contents of structure.
+ * Return: A pointer to new_dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -29,10 +29,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
-	{
-		free(new_dog);
 		return (NULL);
-	}
+
 	new_dog->name = malloc(name_l + 1);
 	if (new_dog->name == NULL)
 	{
