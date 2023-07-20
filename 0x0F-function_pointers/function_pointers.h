@@ -6,7 +6,7 @@
  * file: main.h
  * author: 0xTariq-dev
  * describtion: Header file contains declarations for functions
- * 		used in the 0x0F-functions_pointers project
+ *		used in the 0x0F-functions_pointers project
  */
 
 int _putchar(char c);
