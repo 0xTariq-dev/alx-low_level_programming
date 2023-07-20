@@ -10,7 +10,7 @@
  * @name: A pointer to a value to be printed.
  * @f: A pointer to a function to print the name.
  *
- * Return: The name.
+ * Return: Nothing.
  */
 void print_name(char *name, void (*f)(char *))
 {
