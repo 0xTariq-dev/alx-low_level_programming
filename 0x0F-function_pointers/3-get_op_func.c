@@ -31,7 +31,8 @@ int (*get_op_func(char *s))(int, int)
 	while (n < 5)
 	{
 		if (*(op_arr[n]).op == *s && *(s + 1) == '\0')
-				return (op_arr[n].f);
+			return (op_arr[n].f);
+
 		n++;
 	}
 	return (NULL);
