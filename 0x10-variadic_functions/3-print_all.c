@@ -44,7 +44,7 @@ void print_all(const char * const format, ...)
 				tmp = va_arg(parameters, char*);
 				if (tmp != NULL)
 				{
-					printf("%s", temp);
+					printf("%s", tmp);
 					break;
 				}
 				printf("(nil)");
@@ -56,5 +56,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_end(strings);
+	va_end(parameters);
 }
