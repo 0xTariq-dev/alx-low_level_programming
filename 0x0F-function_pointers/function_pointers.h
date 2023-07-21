@@ -1,9 +1,9 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
 
 #include <stdio.h>
 /*
- * file: main.h
+ * file: function_pointers.h
  * author: 0xTariq-dev
  * describtion: Header file contains declarations for functions
  *		used in the 0x0F-functions_pointers project
