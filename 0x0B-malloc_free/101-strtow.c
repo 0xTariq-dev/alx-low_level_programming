@@ -25,11 +25,11 @@ char **strtow(char *str)
 		if ((str[i] != ' ' || *str != '\t') &&
 			((str[i + 1] == ' ' || str[i + 1] == '\t') ||
 			 str[i + 1] == '\n'))
-			count++;
+			cnt++;
 	}
 	if (cnt == 0)
 		return (NULL);
-	arr = malloc(sizeof(char *) * (count + 1));
+	arr = malloc(sizeof(char *) * (cnt + 1));
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0' && k < cnt; i++)
