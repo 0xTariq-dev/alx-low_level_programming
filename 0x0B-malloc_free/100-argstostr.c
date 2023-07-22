@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	int i = 0, x = 0, m = 0, size = 0;
 	char *arg;
 
-	if (ac == NULL || av <= NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	while (i < ac)
 	{
@@ -47,7 +47,7 @@ char *argstostr(int ac, char **av)
 		}
 		arg[m] = '\n';
 		m++;
-		i++
+		i++;
 	}
 	arg[m] = '\0';
 	return (arg);
