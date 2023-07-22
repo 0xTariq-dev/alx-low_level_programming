@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 /**
- * *agrstostr - Concatenates all arguments in a string.
+ * argstostr - Concatenates all arguments in a string.
  * @ac: The number of arguments.
  * @av: A pointer to an array of arguments.
  *
