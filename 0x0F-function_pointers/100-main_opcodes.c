@@ -13,29 +13,32 @@
  *
  * Return: 0 on success, 1 or 2 on fail.
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i, bytes;
-	unsigned char *ptr;
+	int (*add)(int, char **) = main;
+	int i = 0, bytes;
+	char *op;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	bytes = aoti(argv[1]);
+	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	ptr = (unsigned char *)main;
-	i = 0;
-	if (bytes > 0)
+	*op = (char *)add;
+	for (; i < bytes; i++)
 	{
-		while(i < (bytes - 1)
-			printf("%02hhx ", ptr[i++]);
-		printf("%hhx\n", ptr[i]);
+		printf("%x ", *op);
+		if (i < (bytes - 1))
+			printf(" ");
+
+		c++;
 	}
+	printf("\n");
 	return (0);
 }
