@@ -9,10 +9,10 @@
  * file: main.h
  * author: 0xTariq-dev
  * describtion: Header file contains declarations for functions
- * 		used in the 0x12-singly_linked_lists project
+ *		used in the 0x12-singly_linked_lists project
  */
 /**
- * struct new - singly linked list.
+ * struct list_s - singly linked list.
  * @str: Undefined string.
  * @len: Length of the string.
  * @next: Points to the next node.
