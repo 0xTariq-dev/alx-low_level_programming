@@ -24,7 +24,7 @@ typedef struct list_s
 {
 	char *str;
 	unsigned int len;
-	struct list_t *next;
+	struct list_s *next;
 } list_t;
 
 int _putchar(char c);
