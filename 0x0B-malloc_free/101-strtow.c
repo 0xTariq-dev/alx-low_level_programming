@@ -34,7 +34,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0; str[i] != '\0' && k < cnt; i++)
 	{
-		if (str[i] != ' ' || str[i] != '\t')
+		if (str[i] != ' ' && str[i] != '\t')
 		{
 			len = 0, x = i;
 			while ((str[x] != ' ' || str[x] != '\t') && str[x] != '\0')
@@ -52,6 +52,8 @@ char **strtow(char *str)
 			arr[k++][m] = '\0';
 		}
 	}
+	if (arr[k][m++] == '\0')
+		putchar('\n');
 	arr[k] = NULL;
 	return (arr);
 }
