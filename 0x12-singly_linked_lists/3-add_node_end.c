@@ -1,6 +1,6 @@
 /*
  * Author: 0xTariq-dev
- * File: 1-add_note.c
+ * File: 3-add_node_end.c
  */
 
 #include "lists.h"
@@ -8,14 +8,15 @@
 #include <string.h>
 
 /**
- * add_note - Add a new node at the start of a linked list.
+ * add_node_end - Add a new node at the end of a linked list.
  * @head: A double pointer to the head of the linked list.
  * @str: The string to be added to the new nodes
  * Return: The Address of the element or NULL if it fails.
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
+	list_t *tmp = head;
 	unsigned int count = 0;
 
 	while (str[count])
@@ -28,8 +29,16 @@ list_t *add_node(list_t **head, const char *str)
 
 	new->str = strdup(str);
 	new->len = count;
-	new->next = *head;
-	*head = new;
+	new->next = NULL;
 
-	return (*head);
+	if (!(*head))
+	{
+		*head = new;
+		return (new);
+	}
+	while (tmp->next)
+		tmp = tmp->next;
+
+	tmp->next = new;
+	return (new);
 }

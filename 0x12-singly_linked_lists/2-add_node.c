@@ -1,6 +1,6 @@
 /*
  * Author: 0xTariq-dev
- * File: 1-add_note.c
+ * File: 2-add_node.c
  */
 
 #include "lists.h"
@@ -8,7 +8,7 @@
 #include <string.h>
 
 /**
- * add_note - Add a new node at the start of a linked list.
+ * add_node - Add a new node at the start of a linked list.
  * @head: A double pointer to the head of the linked list.
  * @str: The string to be added to the new nodes
  * Return: The Address of the element or NULL if it fails.
