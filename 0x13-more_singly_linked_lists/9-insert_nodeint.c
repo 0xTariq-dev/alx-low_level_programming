@@ -7,10 +7,12 @@
 #include <stdlib.h>
 
 /**
- * sum_listint - Sums all the data in listint_t.
+ * insert_nodeint_at_index - insert a node in a given index of listint_t.
  * @head: A pointer to the linked list to get the sum of.
+ * @idx: The index to create the new node.
+ * @n: The data to add to the new node.
  *
- * Return: The sum of data or 0 if te list is empty.
+ * Return: The address of the new node or NULL if it failed.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
