@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 /**
- * get_nodeint_index - Gets a specific node of a list with it's index.
+ * get_nodeint_at_index - Gets a specific node of a list with it's index.
  * @head: A pointer to the linked list to be freed.
  * @index: The index of the node to get.
  *
@@ -21,9 +21,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 	while (head)
 	{
-		if (x = index)
+		if (x == index)
 			return (head);
-		head = (*head)->next;
+		head = head->next;
 		i++;
 	}
 	return (NULL);
