@@ -1,6 +1,6 @@
 /*
  * Author: 0xTariq-dev
- * File: 6-pop_listint.c
+ * File: 7-get_nodeint_at_index.c
  */
 
 #include "lists.h"
