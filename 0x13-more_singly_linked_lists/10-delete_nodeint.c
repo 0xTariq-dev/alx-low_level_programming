@@ -4,6 +4,7 @@
  */
 
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * delete_nodeint_at_index - Deletes a node in a given index of listint_t.
