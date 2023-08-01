@@ -2,13 +2,16 @@
 #define LISTS_H
 
 #include <stdio.h>
-/*
- * file: lists.h
- * author: 0xTariq-dev
- * describtion: Header file contains declarations for functions
- * 		used in the 0x13-more_singly_linked_lists project.
+#include <stdlib.h>
+#include <string.h>
+#include <stddef.h>
+/**
+ * struct listint - A singly linked list.
+ * @n: Variable to hold a values of integers.
+ * @next: A pointer to the next element in the list.
  */
-typedef struct listint {
+typedef struct listint
+{
 	int n;
 	struct listint *next;
 } listint_t;
