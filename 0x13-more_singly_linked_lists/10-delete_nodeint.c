@@ -13,7 +13,7 @@
  *
  * Return: 1 if succeded or -1 if it failed.
  */
-listint_t delete_nodeint_at_index(listint_t **head, unsigned int index)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int x = 0;
 	listint_t *new, *cpy = *head;
@@ -26,7 +26,7 @@ listint_t delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(cpy);
 		return (1);
 	}
-	for (; x < (idx - 1); x++)
+	for (; x < (index - 1); x++)
 	{
 		if (cpy->next == NULL)
 			return (-1);
