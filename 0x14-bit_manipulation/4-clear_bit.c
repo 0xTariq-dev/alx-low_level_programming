@@ -1,13 +1,13 @@
 /*
  * Author: 0xTariq-dev
- * File: 3-set_bit.c
+ * File: 4-clear_bit.c
  */
 
 #include "main.h"
 #include <stdio.h>
 
 /**
- * set_bit - Sets the value of a bit at a given index.
+ * clear_bit - Sets the value of a bit at a given index.
  * @n: A pointer to the Value of the bit.
  * @index: The index of the bit to get it's value
  *
