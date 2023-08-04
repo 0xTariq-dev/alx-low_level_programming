@@ -18,6 +18,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int pwr = 1, uint = 0;
 	int i = 0;
+
 	if (b == NULL)
 		return (0);
 	for (; b[i]; i++)
@@ -29,7 +30,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '1')
 			uint += pwr;
-		pwr *= 2;
+		pwr *= 2;;
 	}
-	return (uint / 2);
+	return (uint);
 }
