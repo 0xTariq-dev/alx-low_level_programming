@@ -28,9 +28,9 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (; i >= 0; i--)
 	{
-		if (b[i] == '1')
+		if (b[i - 1] == '1')
 			uint += pwr;
-		pwr *= 2;;
+		pwr *= 2;
 	}
 	return (uint);
 }
