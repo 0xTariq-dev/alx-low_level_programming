@@ -15,7 +15,7 @@
 void print_binary(unsigned long int n)
 {
 	int shft;
-	unsigned int tmp;
+	unsigned long int tmp;
 
 	if (n == 0)
 	{
