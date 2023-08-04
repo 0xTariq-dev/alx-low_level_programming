@@ -1,0 +1,21 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+/*
+ * file: main.h
+ * author: 0xTariq-dev
+ * describtion: Header file contains declarations for functions
+ *		used in the 0x14-bit_manipulation project
+ */
+
+int _putchar(char c);
+unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
+int get_bit(unsigned long int n, unsigned int index);
+int set_bit(unsigned long int *n, unsigned int index);
+int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+#endif
