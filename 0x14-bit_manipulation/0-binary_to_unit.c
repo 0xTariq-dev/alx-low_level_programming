@@ -14,21 +14,22 @@
  *		1- there is one or more chars in the string that's not 0 or 1.
  *		2- b is NULL.
  */
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
-	unsigned int idx, unit, i = 0;
-
-	if (!b)
+	unsigned int pwr = 1, uint = 0;
+	int i = 0;
+	if (b == NULL)
 		return (0);
 	for (; b[i]; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 	}
-	while (b)
+	for (; i >= 0; i--)
 	{
-		unit += b[idx] * (2 ^ idx);
-		b++, idx++;
+		if (b[i] == '1')
+			uint += pwr;
+		pwr *= 2;
 	}
-	return (unit);
+	return (uint / 2);
 }
