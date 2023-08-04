@@ -7,30 +7,20 @@
 #include <stdio.h>
 
 /**
- * gett_bit -Gets the value of a bit at a given index.
+ * get_bit - Gets the value of a bit at a given index.
  * @n: The Value of the bit.
  * @index: The index of the bit to get it's value
  *
- * Return: Nothing.
+ * Return: The value of bit at index or -1 if an error occured.
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int shft;
-	unsigned int tmp;
+	unsigned int pm = 1;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-	tmp = n;
-	for (shft = 0; tmp >>= 1; shft++)
-	;
-	for (; shft >= 0; shft--)
-	{
-		if ((n >> shft) & 1)
-			_putchar('1');
-		else
-			_putchar('0');
-	}
+	if (index > 63)
+		return (-1);
+	if (((n >>= index) & pm) == 1)
+		return (1);
+	else
+		return (0);
 }
