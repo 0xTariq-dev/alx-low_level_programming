@@ -1,6 +1,7 @@
 # This is my first repo in C low level programming.
 ## Done for the ALX SE program.
-![istockphoto-1422787212-](https://github.com/0xTariq-dev/alx-low_level_programming/assets/132394314/44d668bc-fad8-4fb7-b12f-80215c98ec39)
+
+![istockphoto-1422787212-](https://github.com/0xTariq-dev/alx-low_level_programming/assets/132394314/328157c3-9920-4755-88d0-070fdfdd77db)
 
 Welcome to the C Programming Repository! This repository contains a collection of C programs and code snippets that cover various topics and concepts in the C programming language.
 Whether you're a beginner learning C or an experienced programmer looking for reference materials, you'll find useful code examples and resources here.
