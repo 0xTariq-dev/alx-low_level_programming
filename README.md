@@ -84,7 +84,7 @@ Feel free to contribute more programs, create new directories, or suggest improv
 -----------------------------------------------------------------------------------------------
 > Feel free to explore the different directories and files in this repository to learn more about C programming.
 -----------------------------------------------------------------------------------------------
-## Contributing
+>### Contributing
 
 Contributions to this repository are welcome! If you want to contribute, please follow these steps:
 
@@ -97,5 +97,7 @@ Contributions to this repository are welcome! If you want to contribute, please 
 **Please ensure that your code follows the established coding conventions and includes any necessary documentation**.
 
 ------------------------------------------------------------------------------------------------------------------------
+>###
+![istockphoto-1422787212-](https://github.com/0xTariq-dev/alx-low_level_programming/assets/132394314/328157c3-9920-4755-88d0-070fdfdd77db)
 
 >## Happy coding!
