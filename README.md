@@ -3,7 +3,7 @@
 
 Welcome to the C Programming Repository! This repository contains a collection of C programs and code snippets that cover various topics and concepts in the C programming language.
 Whether you're a beginner learning C or an experienced programmer looking for reference materials, you'll find useful code examples and resources here.
-
+![alt text](image URL)
 -------------------------------------------------------------------------------------------------
 >### What is C programming language ?
 
@@ -95,12 +95,5 @@ Contributions to this repository are welcome! If you want to contribute, please 
 **Please ensure that your code follows the established coding conventions and includes any necessary documentation**.
 
 ------------------------------------------------------------------------------------------------------------------------
-## License
 
-This repository is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License). You are free to use, modify, and distribute the code in this repository for personal projects.
-
-If you use this repository or find it helpful, I would appreciate attribution by linking back to this repository.
-
----
-
-Happy coding!
+>## Happy coding!
