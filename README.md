@@ -101,3 +101,4 @@ Contributions to this repository are welcome! If you want to contribute, please 
 ![istockphoto-1422787212-](https://camo.githubusercontent.com/e613e25a9712015741bcde8c243ae064f611bb1b5d1685858369adbd92fa290d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49544c6963656e73652d6272696768746f72616e6765)
 
 >## Happy coding!
+![Untitled design](https://github.com/0xTariq-dev/alx-low_level_programming/assets/132394314/7594e583-1f2a-4614-89cf-824221db07c7)
