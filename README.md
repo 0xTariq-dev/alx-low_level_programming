@@ -3,7 +3,7 @@
 
 Welcome to the C Programming Repository! This repository contains a collection of C programs and code snippets that cover various topics and concepts in the C programming language.
 Whether you're a beginner learning C or an experienced programmer looking for reference materials, you'll find useful code examples and resources here.
-![alt text](image URL)
+![C](https://unsplash.com/photos/9onsKFX0inc)
 -------------------------------------------------------------------------------------------------
 >### What is C programming language ?
 
