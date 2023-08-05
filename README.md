@@ -1,9 +1,9 @@
 # This is my first repo in C low level programming.
 ## Done for the ALX SE program.
 
+![cartoon-629_256](https://github.com/0xTariq-dev/alx-low_level_programming/assets/132394314/50189507-bc0e-47b9-a7f8-033203a5bf40)
 Welcome to the C Programming Repository! This repository contains a collection of C programs and code snippets that cover various topics and concepts in the C programming language.
 Whether you're a beginner learning C or an experienced programmer looking for reference materials, you'll find useful code examples and resources here.
-![cartoon-629_256](https://github.com/0xTariq-dev/alx-low_level_programming/assets/132394314/50189507-bc0e-47b9-a7f8-033203a5bf40)
 
 -------------------------------------------------------------------------------------------------
 >### What is C programming language ?
