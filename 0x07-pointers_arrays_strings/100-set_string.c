@@ -9,7 +9,7 @@
 /**
  * set_string - sets the value of a pointer to a string
  * @s: The pointer to the string.
- * @size: The string to point to.
+ * @to: The string to point to.
  */
 void set_string(char **s, char *to)
 {
