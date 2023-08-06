@@ -4,13 +4,14 @@
  */
 
 #include "main.h"
+#include <stdio.h>
 
 /**
- * set_string - Sets the value of a pointer to a char.
- * @s: double pointer.
- * @to: A pointer to a value.
+ * set_string - sets the value of a pointer to a string
+ * @s: The pointer to the string.
+ * @size: The string to point to.
  */
 void set_string(char **s, char *to)
 {
-	*s = to;
+	*s = &(*to);
 }
