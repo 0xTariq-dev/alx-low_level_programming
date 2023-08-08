@@ -20,7 +20,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i = strlen(n1) - 1, x = strlen(n2) - 1;
 	int sum, rem = 0, s, tmp = 0;
 
-	r[size_r - 1] = '\0';
 	s = size_r - 1;
 	while (i >= 0 || x >= 0)
 	{
@@ -46,5 +45,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (s > 0)
 		for (; tmp < size_r - s; tmp++)
 			r[tmp] = r[tmp + s];
+	r[size_r - 1] = '\0';
 	return (r);
 }

@@ -1,1 +1,1 @@
-#This is Alx Bit Manipulation project
+# This is Bit Manipulation Project.
