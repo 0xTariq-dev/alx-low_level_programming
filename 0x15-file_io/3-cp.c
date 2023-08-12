@@ -22,7 +22,7 @@ char *creat_buf(char *tar_file)
 	if (buf == NULL)
 	{
 		dprintf(STDERR_FILENO,
-				"Error: Can't write to file %s\n", tar_file);
+			"Error: Can't write to file %s\n", tar_file);
 		exit(99);
 	}
 	return (buf);
@@ -40,7 +40,7 @@ void close_file(int fd)
 	if (file == -1)
 	{
 		dprintf(STDERR_FILENO,
-				"Error: Can't close fd %d\n", file);
+			"Error: Can't close fd %d\n", file);
 		exit(100);
 	}
 }
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 		if (src == -1 || cont == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't read from file %s\n", argv[1]);
+				"Error: Can't read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
 		}
@@ -82,7 +82,7 @@ int main(int argc, char **argv)
 		if (tar == -1 || wr == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"ERROR: can't write to %s\n", argv[2]);
+				"Error: can't write to %s\n", argv[2]);
 			free(buf);
 			exit(99);
 		}
