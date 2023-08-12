@@ -28,7 +28,7 @@ void exit98(char *s)
  */
 void exit99(char *s)
 {
-	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", s);
 	exit(99);
 }
 /**
