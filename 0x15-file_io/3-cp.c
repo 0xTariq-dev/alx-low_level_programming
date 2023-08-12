@@ -4,8 +4,6 @@
  */
 
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * exit97 - Prints error message and exit.
