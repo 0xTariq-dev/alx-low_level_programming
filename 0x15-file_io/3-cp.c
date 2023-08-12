@@ -21,7 +21,7 @@ void exit97(void)
  */
 void exit98(char *s)
 {
-	dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", s);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
 	exit(98);
 }
 /**
@@ -35,7 +35,7 @@ void exit99(char *s)
 }
 /**
  * exit100 - Prints error message and exit.
- * @s: the first file name passed.
+ * @desc: the first file name passed.
  */
 void exit100(int desc)
 {
