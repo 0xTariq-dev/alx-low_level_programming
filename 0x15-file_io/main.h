@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include "main.h"
+#include <sys/types.h>
+#include <sys/stat.h>
 /*
  * file: main.h
  * author: 0xTariq-dev

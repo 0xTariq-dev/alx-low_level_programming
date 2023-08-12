@@ -7,42 +7,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *creat_buf(char *tar_file);
-
 /**
- * creat_buf - Creates a buffer of characters to store a copy of the src file.
- * @tar_file: The target file to store the buffer.
- *
- * Return: A pointer to the created buffer.
+ * exit97 - Prints error message and exit.
  */
-char *creat_buf(char *tar_file)
+void exit97(void)
 {
-	char *buf = malloc(sizeof(char) * 1024);
-
-	if (buf == NULL)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to file %s\n", tar_file);
-		exit(99);
-	}
-	return (buf);
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
 }
 /**
- * close_file - Closes a file descriptor.
- * @fd: The file descriptor to close.
- *
- * Return: Nothing.
+ * exit98 - Prints error message and exit.
+ * @s: the first file name passed.
  */
-void close_file(int fd)
+void exit98(char *s)
 {
-	int file = close(fd);
-
-	if (file == -1)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't close fd %d\n", file);
-		exit(100);
-	}
+	dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", s);
+	exit(98);
+}
+/**
+ * exit99 - Prints error message and exit.
+ * @s: the second file name passed.
+ */
+void exit99(char *s)
+{
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
+	exit(99);
+}
+/**
+ * exit100 - Prints error message and exit.
+ * @s: the first file name passed.
+ */
+void exit100(int desc)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", desc);
+	exit(100);
 }
 /**
  * main - Copies the content of a file to another file.
@@ -57,40 +55,39 @@ void close_file(int fd)
  */
 int main(int argc, char **argv)
 {
-	int src, tar, cont, wr;
-	char *buf;
+	int src, tar, cont, wr, cl;
+	char buf[1024];
+	mode_t msk = umask(0);
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	buf = creat_buf(argv[2]);
+		exit97();
+
 	src = open(argv[1], O_RDONLY);
+	if (src == -1)
+		exit98(argv[1]);
+
 	cont = read(src, buf, 1024);
 	tar = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while (cont > 0)
+	umask(msk);
+	if (tar == -1)
+		exit99(argv[2]);
+
+	while (*buf)
 	{
-		if (src == -1 || cont == -1)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
-			free(buf);
-			exit(98);
-		}
-		wr = write(tar, buf, cont);
-		if (tar == -1 || wr == -1)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: can't write to %s\n", argv[2]);
-			free(buf);
-			exit(99);
-		}
 		cont = read(src, buf, 1024);
-		tar = open(argv[2], O_WRONLY | O_APPEND);
+		if (cont == -1)
+			exit98(argv[1]);
+		wr = write(tar, buf, cont);
+		if (wr == -1)
+			exit99(argv[2]);
 	}
-	free(buf);
-	close_file(src);
-	close_file(tar);
+
+	cl = close(src);
+	if (cl == -1)
+		exit100(-1);
+	cl = close(tar);
+	if (cl == -1)
+		exit100(-1);
+
 	return (0);
 }
