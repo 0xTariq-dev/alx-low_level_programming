@@ -67,20 +67,21 @@ int main(int argc, char **argv)
 		exit98(argv[1]);
 
 	cont = read(src, buf, 1024);
+	if (cont == -1)
+		exit99(argv[2]);
+
 	tar = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	umask(msk);
 	if (tar == -1)
 		exit99(argv[2]);
 
-	while (*buf)
+	while ((cont = read(src, buf, 1024)) > 0)
 	{
-		cont = read(src, buf, 1024);
-		if (cont == -1)
-			exit98(argv[1]);
 		wr = write(tar, buf, cont);
 		if (wr == -1)
 			exit99(argv[2]);
 	}
+	if (cont == -1)
+		exit98(argv[1]);
 
 	cl = close(src);
 	if (cl == -1)
@@ -89,5 +90,6 @@ int main(int argc, char **argv)
 	if (cl == -1)
 		exit100(-1);
 
+	umask(msk);
 	return (0);
 }
