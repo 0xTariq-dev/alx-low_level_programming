@@ -53,7 +53,7 @@ void exit100(int desc)
  */
 int main(int argc, char **argv)
 {
-	int src, tar, cont, wr, cl;
+	int src, tar, rd = 1024, wr, cl;
 	char buf[1024];
 	mode_t msk = umask(0);
 
@@ -64,21 +64,20 @@ int main(int argc, char **argv)
 	if (src == -1)
 		exit98(argv[1]);
 
-	cont = read(src, buf, 1024);
-	if (cont == -1)
-		exit99(argv[2]);
-
 	tar = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (tar == -1)
 		exit99(argv[2]);
 
-	while ((cont = read(src, buf, 1024)) > 0)
+	while (rd == 1024)
 	{
-		wr = write(tar, buf, cont);
+		rd = read(src, buf, 1024);
+		if (rd == -1)
+			exit98(argv[1]);
+		wr = write(tar, buf, rd);
 		if (wr == -1)
 			exit99(argv[2]);
 	}
-	if (cont == -1)
+	if (rd == -1)
 		exit98(argv[1]);
 
 	cl = close(src);
