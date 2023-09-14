@@ -1,16 +1,16 @@
 /*
  * Author: 0xTariq-dev
- * File: 1-dlistint_len.c
+ * File: 3-add_dnodeint_end.c
  */
 
 #include "lists.h"
 
 /**
- * add_dnodeint - Add element to the beginning of a list.
+ * add_dnodeint_end - Add element to the end of a list.
  * @head: A pointer to the list.
  * @n: The value to add to the list.
  *
- * Return: The size of the list.
+ * Return: The Address of the new element
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -25,7 +25,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	if (*head == NULL)
 	{
-		tmp->prev= NULL;
+		tmp->prev = NULL;
 		*head = tmp;
 		return (*head);
 	}

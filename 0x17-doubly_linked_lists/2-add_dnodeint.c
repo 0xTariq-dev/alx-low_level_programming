@@ -1,6 +1,6 @@
 /*
  * Author: 0xTariq-dev
- * File: 1-dlistint_len.c
+ * File: 2-add_dnodeint.c
  */
 
 #include "lists.h"
@@ -10,7 +10,7 @@
  * @head: A pointer to the list.
  * @n: The value to add to the list.
  *
- * Return: The size of the list.
+ * Return: The address of the new list.
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
