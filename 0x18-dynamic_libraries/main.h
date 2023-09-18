@@ -5,7 +5,7 @@
  * file: main.h
  * author: 0xTariq-dev
  * describtion: Header file contains declarations for functions
- * 		used in the 0x18-dynamic_libraries.
+ *		used in the 0x18-dynamic_libraries.
  */
 
 int _putchar(char c);
