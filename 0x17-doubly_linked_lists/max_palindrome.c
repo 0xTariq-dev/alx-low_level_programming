@@ -40,7 +40,7 @@ char *rev_string(char *s)
  */
 unsigned long int max_palindrome(void)
 {
-	unsigned long int product = 0, max = 0, n1, n2;
+	unsigned long int product = 0, max = 0, n1 = 1, n2;
 	int digits = 0;
 	char str[50], *rev_str;
 
@@ -48,7 +48,7 @@ unsigned long int max_palindrome(void)
 	printf("Find the max palindrome product of two numbers\n");
 	printf("Enter the max number of digits for the two numbers: ");
 	scanf("%d", &digits);
-	for (; digits >= 0; digits--)
+	for (; digits > 0; digits--)
 		n1 *= 10;
 	n1 -= 1;
 	n2 = n1;
@@ -60,6 +60,8 @@ unsigned long int max_palindrome(void)
 			product = n1 * n2; /*Calculate the product*/
 			sprintf(str, "%ld", product); /*Converting the number to string*/
 			rev_str = rev_string(str); /*Reversing the string*/
+			if (product < max)
+				break;
 			/*Checking if the string is palindrome*/
 			if (strcmp(str, rev_str) == 0)
 			{
