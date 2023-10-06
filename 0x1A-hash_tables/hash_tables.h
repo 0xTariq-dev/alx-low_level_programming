@@ -10,7 +10,7 @@
  * file: hash_tables.h
  * author: 0xTariq-dev
  * describtion: Header file contains declarations for functions
- * 		used in the 0x1A-hash_tables project
+ *		used in the 0x1A-hash_tables project
  */
 
 /**
@@ -23,9 +23,9 @@
  */
 typedef struct hash_node_s
 {
-     char *key;
-     char *value;
-     struct hash_node_s *next;
+	char *key;
+	char *value;
+	struct hash_node_s *next;
 } hash_node_t;
 
 /**
@@ -38,8 +38,8 @@ typedef struct hash_node_s
  */
 typedef struct hash_table_s
 {
-     unsigned long int size;
-     hash_node_t **array;
+	unsigned long int size;
+	hash_node_t **array;
 } hash_table_t;
 
 /*Functions prototypes*/
