@@ -8,10 +8,8 @@
 /**
  * hash_table_print - Prints all nodes in a hash table.
  * @ht: A pointer to the hash table.
- * @key: The key of the element.
  *
- * Return: The value associated with the key,
- *		Or NULL if no such key is found.
+ * Return: Nothing.
  */
 void hash_table_print(const hash_table_t *ht)
 {
