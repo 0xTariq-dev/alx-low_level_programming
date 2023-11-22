@@ -5,7 +5,7 @@ CC=gcc
 SRC= main.c school.c
 
 # The object files to be created.
-OBJ= main.o school.o
+OBJ= $(SRC:.c=.o)
 
 # Name of the executable.
 NAME= school
@@ -13,5 +13,3 @@ NAME= school
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-.c.o:
-	$(CC) -c $< -o $@
