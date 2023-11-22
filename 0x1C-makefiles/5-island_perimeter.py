@@ -4,19 +4,19 @@
 
 def island_perimeter(grid):
     """Calculates the perimeter of an island.
-    
+
     Represented by a grid which 0 is water and 1 is land.
-    
+
     Args:
         grid (list): A list of lists of digits representing the island area.
-        
+
     Returns:
          The perimeter of the island.
     """
     perimeter = 0
     width = len(grid[0]) - 1
     height = len(grid) - 1
-    
+
     for y, row in enumerate(grid):
         for x, cell in enumerate(row):
 
