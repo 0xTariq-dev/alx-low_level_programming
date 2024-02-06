@@ -10,4 +10,4 @@
 
 int linear_search(int *array, size_t size, int value);
 
-#endif
+#endif SEARCH_ALGOS_H
