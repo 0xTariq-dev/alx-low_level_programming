@@ -29,7 +29,7 @@ int exponential_search(int *array, size_t size, int value)
 	printf("value found between indexes [%lu] and [%lu]\n", start, end);
 
 	/* Perform the binary search. */
-	while (start <= end)
+	while (start < end)
 	{
 		printf("Searching in array: ");
 		for (i = start; i < end; i++)
