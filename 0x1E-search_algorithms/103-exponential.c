@@ -26,7 +26,7 @@ int exponential_search(int *array, size_t size, int value)
 	/* Calculate the start and end of the subarray. */
 	start = bound / 2;
 	end = bound < size - 1 ? bound : size - 1;
-	printf("value found between indexes [%lu] and [%lu]\n", start, end);
+	printf("Value found between indexes [%lu] and [%lu]\n", start, end);
 
 	/* Perform the binary search. */
 	while (start <= end)
